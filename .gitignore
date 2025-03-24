@@ -41,7 +41,7 @@ out/
 src/main/resources/application.properties
 
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -54,11 +54,11 @@ src/main/resources/application.properties
 /coverage
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build
 
 # misc
 .DS_Store

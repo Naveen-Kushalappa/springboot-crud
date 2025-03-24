@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react'
 import axios from "axios";
-const baseURL = process.env.BACKEND_BASE_URL;
+import Link from 'next/link';
+
+const baseURL = 'http://localhost:8080';
 
 const AddEmployee = () => {
 
@@ -26,15 +28,19 @@ const AddEmployee = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <>       
+         <Link href="/employees">All employees</Link> 
+         <form onSubmit={handleSubmit}>
             <input name="firstName" placeholder='First name' onChange={handleChange}/>
             <input name="lastName" placeholder='Last name' onChange={handleChange}/>
-            <input name="email" placeholder='Email' onChange={handleChange}/>
+            <input name="email" type='email' placeholder='Email' onChange={handleChange}/>
             <input name="jobTitle" placeholder='Job Title' onChange={handleChange}/>
             <input name="employeeCode" placeholder='Employee Code' onChange={handleChange}/>
             <input name="phone" placeholder='Phone' onChange={handleChange}/>
             <button type="submit">Add</button>
         </form>
+        </>
+
     )
 
 

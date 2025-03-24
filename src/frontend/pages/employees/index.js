@@ -26,7 +26,7 @@ const Employeelist = () => {
                 {employees.map((employee) => (
                     <li key={employee.id}> 
                      Employee Id: {employee.id} {employee.firstName} - {employee.lastName} Job title {employee.jobTitle} 
-                    <Link href={`/edit/${employee.id}`}>Edit</Link>
+                    <Link href={`/employees/edit/${employee.id}`}>Edit</Link>
                     <button onClick={() => deleteEmployee(employee.id)}>Delete</button>  
                     </li>
                     )   
